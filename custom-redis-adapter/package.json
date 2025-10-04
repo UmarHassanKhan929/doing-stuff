@@ -1,0 +1,30 @@
+{
+  "main": "dist/RedisTableAdapter.js",
+  "types": "dist/RedisTableAdapter.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "example:auth": "ts-node examples/auth.ts",
+    "example:ecommerce": "ts-node examples/ecommerce.ts",
+    "example:leaderboard": "ts-node examples/leaderboard.ts",
+    "example:social": "ts-node examples/social.ts",
+    "example:tasks": "ts-node examples/task-queue.ts",
+    "example:ratelimit": "ts-node examples/rate-limiting.ts",
+    "example:event": "ts-node examples/event-scheduling.ts",
+    "example:realestate": "ts-node examples/real-estate.ts",
+    "test": "ts-node src/test.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "ioredis": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/node": "^24.6.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
